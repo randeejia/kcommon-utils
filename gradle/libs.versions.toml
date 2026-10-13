@@ -1,14 +1,33 @@
 [versions]
-agp = "9.1.0"
-android-compileSdk = "37"
+# Build & Android
+agp = "8.11.1"
+android-compileSdk = "36"
 android-minSdk = "24"
-kotlin = "2.4.10"
+android-targetSdk = "36"
+
+# Maven Publish
 vanniktech-maven-publish = "0.36.0"
 
+
+# Kotlin & testing
+junit = "4.13.2"
+kotlin = "2.2.21-1.1.0"
+
+
 [libraries]
+# ----- Testing -----
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+junit = { module = "junit:junit", version.ref = "junit" }
 
 [plugins]
+# Android
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
 android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+
+# Kotlin
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+
+# Maven Publish
 vanniktech-mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-maven-publish" }
