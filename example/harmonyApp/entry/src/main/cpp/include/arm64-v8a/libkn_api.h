@@ -68,9 +68,6 @@ typedef struct {
 } libkn_kref_com_example_compose_ohos_Platform;
 typedef struct {
   libkn_KNativePtr pinned;
-} libkn_kref_com_example_compose_ohos_DeviceInfo;
-typedef struct {
-  libkn_KNativePtr pinned;
 } libkn_kref_com_example_compose_ohos_Greeting;
 typedef struct {
   libkn_KNativePtr pinned;
@@ -165,12 +162,6 @@ typedef struct {
       struct {
         struct {
           struct {
-            struct {
-              libkn_KType* (*_type)(void);
-              libkn_kref_com_example_compose_ohos_DeviceInfo (*DeviceInfo)();
-              const char* (*fullName)(libkn_kref_com_example_compose_ohos_DeviceInfo thiz);
-              const char* (*name)(libkn_kref_com_example_compose_ohos_DeviceInfo thiz);
-            } DeviceInfo;
             struct {
               libkn_KType* (*_type)(void);
               libkn_kref_com_example_compose_ohos_Greeting (*Greeting)();

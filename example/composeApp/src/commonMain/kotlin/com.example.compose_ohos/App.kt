@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.randee.common.utils.getDeviceInfo
 import org.jetbrains.compose.resources.painterResource
 
 import compose_ohos.composeapp.generated.resources.*
@@ -32,16 +33,21 @@ fun App() {
                 Text("Click me!")
             }
             AnimatedVisibility(showContent) {
-                val greeting = remember { DeviceInfo().name() }
-                val fullName = remember { DeviceInfo().fullName() }
+                val deviceInfo = getDeviceInfo()
 
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
-                    Text("Compose: $greeting")
-                    Text(fullName)
+                    Text("platform: ${deviceInfo.platform}")
+                    Text("osName: ${deviceInfo.osName}")
+                    Text("osVersion: ${deviceInfo.osVersion}")
+                    Text("apiVersion: ${deviceInfo.apiVersion}")
+                    Text("brand: ${deviceInfo.brand}")
+                    Text("manufacturer: ${deviceInfo.manufacturer}")
+                    Text("model: ${deviceInfo.model}")
+                    Text("deviceType: ${deviceInfo.deviceType}")
                 }
             }
         }
