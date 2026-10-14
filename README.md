@@ -38,6 +38,13 @@
 |Compose compiler|2.2.21-1.1.0|插件,和Kotlin版本保持一一致|
 |Skiko|0.9.22.2-1.1.0|插件，鸿蒙架构目标|
 
+## API
+
+### DeviceInfo
+
+
+
+
 # 参考资料
 - [Kotlin](https://kotlinlang.org/docs/home.html)
 - [Kotlin/Native](https://kotlinlang.org/docs/native-overview.html)
@@ -45,3 +52,4 @@
 - [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform/get-started.html)
 - [Compose Multiplatform](https://kotlinlang.org/compose-multiplatform/)
 - [CPF-KMP-CMP](https://gitcode.com/CPF-KMP-CMP/docs)
+

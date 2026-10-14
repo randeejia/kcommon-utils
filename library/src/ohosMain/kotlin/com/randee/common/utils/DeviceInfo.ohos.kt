@@ -3,18 +3,20 @@ package com.randee.common.utils
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.toKString
 import platform.BasicServicesKit.DeviceInfo.OH_GetOSFullName
+import platform.BasicServicesKit.DeviceInfo.OH_GetDeviceType
+import platform.BasicServicesKit.DeviceInfo.OH_GetBrand
+import platform.BasicServicesKit.DeviceInfo.OH_GetManufacture
+import platform.BasicServicesKit.DeviceInfo.OH_GetHardwareModel
+import platform.BasicServicesKit.DeviceInfo.OH_GetSdkApiVersion
 
-class DeviceInfo():IDevice{
-
-    override val name: String
-        get() = "Harmony"
-
-    @OptIn(ExperimentalForeignApi::class)
-    override fun fullName():String {
-        val value = OH_GetOSFullName()
-        return value?.toKString() ?: ""
-    }
-
-}
-
-actual fun getDeviceInfo() : IDevice= DeviceInfo()
+@OptIn(ExperimentalForeignApi::class)
+actual fun getDeviceInfo()  = DeviceInfo(
+    platform = Platform.HARMONY,
+    osName = "HarmonyOS",
+    osVersion = OH_GetOSFullName()?.toKString() ?: "未知",
+    apiVersion = OH_GetSdkApiVersion(),
+    brand = OH_GetBrand()?.toKString() ?: "未知",
+    manufacturer = OH_GetManufacture()?.toKString() ?: "未知",
+    model = OH_GetHardwareModel()?.toKString() ?: "未知",
+    deviceType = OH_GetDeviceType()?.toKString() ?: "未知",
+)
