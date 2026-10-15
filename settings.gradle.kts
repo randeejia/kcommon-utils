@@ -1,4 +1,4 @@
-rootProject.name = "randee-common-utils-lib"
+rootProject.name = "kcommon-utils"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
