@@ -6,13 +6,13 @@ plugins {
     alias(libs.plugins.vanniktech.mavenPublish)
 }
 
-group = "com.randee.common"
+group = "io.github.randee"
 version = "1.0.0"
 
 kotlin {
 
     androidLibrary {
-        namespace = "com.randee.common.utils"
+        namespace = "io.github.randee.common"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
 
