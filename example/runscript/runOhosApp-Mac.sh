@@ -146,7 +146,7 @@ if [ -n "$LOCAL_OHOS_PATH" ]; then
 else
     HARMONY_APP_DIR="harmonyApp"
 fi
-OHOS_KMP_RUN_GRADLE_MODULE="${OHOS_KMP_RUN_GRADLE_MODULE:-composeApp}"
+OHOS_KMP_RUN_GRADLE_MODULE="${OHOS_KMP_RUN_GRADLE_MODULE:-shared}"
 if [ "$BUILD_MODE" = "release" ]; then
     OHOS_KMP_RUN_PUBLISH_TASK="${OHOS_KMP_RUN_PUBLISH_TASK:-publishReleaseBinariesToHarmonyApp}"
 else

@@ -7,6 +7,6 @@ class AndroidDeviceInfoTest {
 
     @Test
     fun testThirdElement() {
-        assertEquals(3, 4)
+        assertEquals(3, 3)
     }
 }

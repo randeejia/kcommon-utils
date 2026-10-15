@@ -13,20 +13,14 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    dependencies {
-        implementation(projects.composeApp)
-        implementation(libs.androidx.activity.compose)
-        implementation(libs.compose.ui.tooling.preview)
-        debugImplementation(libs.compose.ui.tooling)
-    }
 }
 
 android {
-    namespace = "com.example.compose_ohos"
+    namespace = "com.example.kmp.common"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.example.compose_ohos"
+        applicationId = "com.example.kmp.common"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -46,4 +40,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+}
+
+dependencies {
+    implementation(projects.shared)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.compose.ui.tooling.preview)
+    implementation(libs.androidx.core.ktx)
+    debugImplementation(libs.compose.ui.tooling)
 }

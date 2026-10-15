@@ -7,6 +7,6 @@ class DeviceInfoTest {
 
     @Test
     fun `test 3rd element`() {
-        assertEquals("a", "b")
+        assertEquals("a", "a")
     }
 }

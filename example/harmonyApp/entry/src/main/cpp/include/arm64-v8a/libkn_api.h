@@ -65,13 +65,13 @@ typedef struct {
 } libkn_kref_kotlin_ULong;
 typedef struct {
   libkn_KNativePtr pinned;
-} libkn_kref_com_example_compose_ohos_Platform;
+} libkn_kref_com_example_kmp_common_Platform;
 typedef struct {
   libkn_KNativePtr pinned;
-} libkn_kref_com_example_compose_ohos_Greeting;
+} libkn_kref_com_example_kmp_common_Greeting;
 typedef struct {
   libkn_KNativePtr pinned;
-} libkn_kref_com_example_compose_ohos_OhosPlatform;
+} libkn_kref_com_example_kmp_common_OhosPlatform;
 
 extern void* MainArkUIViewController(void* env);
 extern void InitJsRenderNodeContext(void* env, void* nodeConstructor, void* statusModifyConstructor, libkn_KDouble ratio, libkn_KBoolean fixed);
@@ -163,24 +163,26 @@ typedef struct {
         struct {
           struct {
             struct {
-              libkn_KType* (*_type)(void);
-              libkn_kref_com_example_compose_ohos_Greeting (*Greeting)();
-              const char* (*fullName)(libkn_kref_com_example_compose_ohos_Greeting thiz);
-              const char* (*greet)(libkn_kref_com_example_compose_ohos_Greeting thiz);
-            } Greeting;
-            struct {
-              libkn_KType* (*_type)(void);
-              const char* (*get_name)(libkn_kref_com_example_compose_ohos_Platform thiz);
-            } Platform;
-            struct {
-              libkn_KType* (*_type)(void);
-              libkn_kref_com_example_compose_ohos_OhosPlatform (*OhosPlatform)();
-              const char* (*get_name)(libkn_kref_com_example_compose_ohos_OhosPlatform thiz);
-            } OhosPlatform;
-            void* (*MainArkUIViewController_)(void* env);
-            libkn_kref_com_example_compose_ohos_Platform (*getPlatform)();
-            const char* (*getPlatformFullName)();
-          } compose_ohos;
+              struct {
+                libkn_KType* (*_type)(void);
+                libkn_kref_com_example_kmp_common_Greeting (*Greeting)();
+                const char* (*fullName)(libkn_kref_com_example_kmp_common_Greeting thiz);
+                const char* (*greet)(libkn_kref_com_example_kmp_common_Greeting thiz);
+              } Greeting;
+              struct {
+                libkn_KType* (*_type)(void);
+                const char* (*get_name)(libkn_kref_com_example_kmp_common_Platform thiz);
+              } Platform;
+              struct {
+                libkn_KType* (*_type)(void);
+                libkn_kref_com_example_kmp_common_OhosPlatform (*OhosPlatform)();
+                const char* (*get_name)(libkn_kref_com_example_kmp_common_OhosPlatform thiz);
+              } OhosPlatform;
+              void* (*MainArkUIViewController_)(void* env);
+              libkn_kref_com_example_kmp_common_Platform (*getPlatform)();
+              const char* (*getPlatformFullName)();
+            } common;
+          } kmp;
         } example;
       } com;
       struct {

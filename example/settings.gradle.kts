@@ -1,4 +1,4 @@
-rootProject.name = "Compose_ohos"
+rootProject.name = "kcommon-utils-example"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -8,6 +8,7 @@ pluginManagement {
         maven("https://maven.eazytec-cloud.com/nexus/repository/maven-public/")
         // 引入 Gradle 插件门户（主要用于查找 Gradle 插件）
         gradlePluginPortal()
+        mavenCentral()
     }
 }
 
@@ -15,12 +16,13 @@ dependencyResolutionManagement {
     repositories {
         maven("https://maven.eazytec-cloud.com/nexus/repository/maven-releases/")
         maven("https://maven.eazytec-cloud.com/nexus/repository/maven-public/")
-//        mavenCentral()
+        mavenCentral()
+        //        mavenCentral()
 //        google()
     }
 }
 include(":library")
 // library 模块位于 example 的上级目录，需显式指定 projectDir
 project(":library").projectDir = file("../library")
-include(":composeApp")
+include(":shared")
 include(":androidApp")

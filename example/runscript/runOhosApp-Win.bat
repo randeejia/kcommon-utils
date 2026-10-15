@@ -136,7 +136,7 @@ if not "%LOCAL_OHOS_PATH%"=="" (
 ) else (
   set "HARMONY_APP_DIR=harmonyApp"
 )
-if not defined OHOS_KMP_RUN_GRADLE_MODULE set "OHOS_KMP_RUN_GRADLE_MODULE=composeApp"
+if not defined OHOS_KMP_RUN_GRADLE_MODULE set "OHOS_KMP_RUN_GRADLE_MODULE=shared"
 if "%BUILD_MODE%"=="release" (
   if not defined OHOS_KMP_RUN_PUBLISH_TASK set "OHOS_KMP_RUN_PUBLISH_TASK=publishReleaseBinariesToHarmonyApp"
 ) else (
