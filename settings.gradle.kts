@@ -1,4 +1,4 @@
-rootProject.name = "kcommon-utils"
+rootProject.name = "kcommon_utils"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

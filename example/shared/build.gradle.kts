@@ -56,6 +56,13 @@ kotlin {
                 )
             }
         }
+
+        ohosTarget.compilations.getByName("main") {
+            val resource by cinterops.creating {
+                defFile(file("src/ohosMain/cinterop/resource.def"))
+                includeDirs(file("src/ohosMain/cinterop/include"))
+            }
+        }
     }
 
     sourceSets {
@@ -169,7 +176,7 @@ arrayOf("debug", "release").forEach { type ->
             into("entry/libs/arm64-v8a/")           // 指定目标目录
         }
         val composeResourcePackage =
-            "${rootProject.name.lowercase()}.${project.name.lowercase()}.generated.resources"
+            "${rootProject.name.replace('-', '_').lowercase()}.${project.name.replace('-', '_').lowercase()}.generated.resources"
         from("src/commonMain/composeResources") {
             into("entry/src/main/resources/rawfile/composeResources/$composeResourcePackage/")
         }

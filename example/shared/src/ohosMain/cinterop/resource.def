@@ -1,2 +1,6 @@
 package = platform.resource
-headers = raw_file_manager.h raw_file.h
+headers = raw_file_manager.h raw_file.h add.h
+# 声明链接已编译好的静态库（demo.cpp 的实现）
+staticLibraries = libdemo.a
+# 和staticLibraries同时出现，配置静态链接库，libraryPaths = libdemo.a的绝对路径
+

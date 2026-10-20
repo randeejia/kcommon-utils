@@ -3,10 +3,12 @@ import kotlinx.cinterop.ExperimentalForeignApi
 import kotlin.experimental.ExperimentalNativeApi
 import platform.BasicServicesKit.DeviceInfo.OH_GetOSFullName
 import kotlinx.cinterop.toKString
+import platform.resource.add
 
 @OptIn(ExperimentalNativeApi::class)
 class OhosPlatform : Platform {
-    override val name: String = "HarmonyOS"
+    @OptIn(ExperimentalForeignApi::class)
+    override val name: String = "HarmonyOS ${add(2,3)}"
 }
 
 @OptIn(ExperimentalNativeApi::class)

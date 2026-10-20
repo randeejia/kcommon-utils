@@ -35,6 +35,7 @@ fun App() {
             }
             AnimatedVisibility(showContent) {
                 val deviceInfo = getDeviceInfo()
+                val platform = getPlatform()
 
                 Column(
                     modifier = Modifier.fillMaxWidth(),
@@ -49,6 +50,7 @@ fun App() {
                     Text("manufacturer: ${deviceInfo.manufacturer}")
                     Text("model: ${deviceInfo.model}")
                     Text("deviceType: ${deviceInfo.deviceType}")
+                    Text("Platform Name: ${platform.name}")
                 }
             }
         }
